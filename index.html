@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Procampo TV</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/auto-logo-slider.css" />
+		<style>
+			/* Override mobile navigation panel styles */
+			#navPanel, #titleBar {
+				display: none !important;
+			}
+
+			@media screen and (max-width: 736px) {
+				#navPanel {
+					display: block !important;
+					-moz-transform: translateY(-100vh) !important;
+					-webkit-transform: translateY(-100vh) !important;
+					-ms-transform: translateY(-100vh) !important;
+					transform: translateY(-100vh) !important;
+				}
+
+				#titleBar {
+					display: block !important;
+				}
+
+				body.navPanel-visible #navPanel {
+					-moz-transform: translateY(0) !important;
+					-webkit-transform: translateY(0) !important;
+					-ms-transform: translateY(0) !important;
+					transform: translateY(0) !important;
+				}
+			}
+
+			.fade-in-up {
+				opacity: 0;
+				transform: translateY(50px);
+				transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+			}
+
+			.fade-in-up.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			#main strong {
+				color: #aad568;
+				font-weight: 600;
+			}
+
+			.button.conoce-mas:hover {
+				background-color: #7ea93e !important;
+			}
+
+			/* 3D Card Effect Styles */
+			.card-3d {
+				transform-style: preserve-3d;
+				transform: perspective(1000px);
+				transition: transform 0.1s ease-out;
+				will-change: transform;
+				height: 400px; /* Fixed height for all cards */
+				display: flex;
+				flex-direction: column;
+			}
+
+			.card-3d .image.featured {
+				flex: 0 0 auto; /* Don't allow image to flex */
+			}
+
+			.card-3d .image.featured img {
+				transition: transform 0.1s ease-out;
+				will-change: transform;
+				height: 200px; /* Fixed height for images */
+				object-fit: contain;
+			}
+
+			.card-3d header {
+				flex: 0 0 auto; /* Don't allow header to flex */
+			}
+
+			.card-3d p {
+				flex: 1 1 auto; /* Allow paragraph to take remaining space */
+				margin: 0;
+				display: flex;
+				align-items: center;
+			}
+
+			.card-3d:hover {
+				transform: perspective(1000px) scale(1.02);
+			}
+		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+					<video id="header-video" autoplay muted loop playsinline>
+						<source src="videos/header_video.mp4" type="video/mp4">
+					</video>
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 400px; margin: 0 auto; display: block;">
+								<hr />
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly conoce-mas">Conocé más</a>
+							</footer>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 300px; margin: 0 auto; display: block;">
+						<p>
+							Una productora de TV que desde hace dieciséis años y de manera semanal, desarrolla desde
+							la provincia de Córdoba una amplia gama de temas relacionados con los distintos sectores
+							productivos del Campo Argentino.
+						</p>
+					</header>
+				</section>
+
+			<!-- Auto Logo Slider -->
+				<h4 style="text-align: center; margin: 2em 0 2em; font-size: 1.5em; color: #484d55;">Organizaciones Con las que Trabajamos</h4>
+				<div class="auto-logo-slider">
+					<div class="slider-track">
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 1" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 2" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 3" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 4" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 5" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 6" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 7" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 8" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 9" />
+						</div>
+						<div class="slide">
+							<img src="images/logoProcampo.png" alt="Logo 10" />
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+
+					<article id="main" class="container special fade-in-up">
+						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+						<header>
+							<h2><a href="#">ÁREA DE COBERTURA</a></h2>
+							<p>
+								Canal Rural es la mayor señal de cable vía satélite de América Latina
+								dedicada al sector agropecuario, a la producción agroindustrial y alimenticia, transmitiendo <strong>las 24 horas, los 365 días del año.</strong>
+								Hoy más de 6 millones de hogares abonados, el 96 % de los telespectadores en Argentina, reciben nuestra señal.
+								Solo en Argentina <strong id="animated-number">17.820.000</strong> personas.
+							</p>
+						</header>
+						<footer>
+							<a href="#" class="button">Continue Reading</a>
+						</footer>
+					</article>
+
+					<div class="container" style="margin-top: 4em;">
+						<div class="row">
+							<div class="col-6 col-12-mobile">
+								<article class="special card-3d" style="background: #f8f8f8; padding: 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+									<a href="#" class="image featured" style="margin: 0 auto 2em; width: 80%; max-width: 300px;">
+										<img src="images/logoProcampo.png" alt="" style="border-radius: 0.3em;" />
+									</a>
+									<header>
+										<h3><a href="#">Procampo TV</a></h3>
+									</header>
+									<p>
+										En señales Satelitales: Canal Rural (Domingo 12,00 hs lunes 10 hs martes 20,00 hs  jueves 16,00 hs)
+									</p>
+								</article>
+							</div>
+							<div class="col-6 col-12-mobile">
+								<article class="special card-3d" style="background: #f8f8f8; padding: 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+									<a href="https://www.cba24n.com.ar/programa/campo-activo" class="image featured" style="margin: 0 auto 2em; width: 80%; max-width: 300px;">
+										<img src="images/logoProcampo.png" alt="" style="border-radius: 0.3em;" />
+									</a>
+									<header>
+										<h3><a href="https://www.cba24n.com.ar/programa/campo-activo">Campo Activo</a></h3>
+									</header>
+									<p>
+										En Señal de Aire: Canal 10 de Córdoba (Domingo 11,30 hs)
+									</p>
+								</article>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Features -->
+				<div class="wrapper style1">
+					<div class="container">
+						<div style="display: flex; gap: 2em; padding: 0 2em;">
+							<article style="flex: 1; background: #f8f8f8; padding: 3em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+								<header>
+									<h3>Nuestro Objetivo</h3>
+								</header>
+								<p>
+									Acercar el trabajo diario de
+									empresas, organizaciones públicas
+									y privadas, productores y
+									técnicos de interior del país.
+								</p>
+							</article>
+							<article style="flex: 1; background: #f8f8f8; padding: 3em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+								<header>
+									<h3>Nuestro Desafío</h3>
+								</header>
+								<p>
+									Brindar un producto de calidad
+									que acompañe el permanente
+									crecimiento del sector.			
+								</p>
+							</article>
+						</div>
+					</div>
+				</div>
+
+				<!-- Carousel -->
+				<section class="carousel">
+					<header>
+						<h2><strong>NUESTROS SERVICIOS</strong></h2>
+					</header>
+					<div class="reel">
+
+						<article>
+							<a href="#" class="image featured"><img src="images/logoProcampo.png" alt="" /></a>
+							<header>
+								<h3><a href="#">Procampo TV</a></h3>
+							</header>
+							<p>
+								En señales Satelitales: Canal Rural (Domingo 12,00 hs; lunes 10 hs;martes 20,00 hs; jueves 16,00 hs)
+							</p>
+						</article>
+
+						<article>
+							<a href="https://www.cba24n.com.ar/programa/campo-activo" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<header>
+								<a href="https://www.cba24n.com.ar/programa/campo-activo">
+									<h3>Campo Activo</h3>
+								</a>
+							</header>
+							<p>
+								En Señal de Aire: Canal 10 de Córdoba (Domingo 11,30 hs)
+							</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/tecnomyl2.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Generación de contenido técnico</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/osmo.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Cobertura de eventos</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/tecnomyl3.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Transmisiones en vivo multiplataforma</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/expoagro_ascanelli.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Elaboración de informes empresariales</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/tecnomyl2.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Acciones comerciales en tandas publicitarias</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<div id="footer" style="padding: 2em 0 1em 0;">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div style="display: flex; justify-content: center; align-items: flex-start; margin: 0 0 1em 0; gap: 4em; max-width: 800px; margin-left: auto; margin-right: auto;">
+									<!-- Contact -->
+									<section class="contact" style="flex: 0 1 auto;">
+										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+											<li style="margin: 0.5em 0;"><h6 style="color: #ffffff; margin: 0;">Nuestras redes sociales</h6></li>
+											<li style="margin: 0.5em 0;">
+												<ul class="icons" style="justify-content: center; margin: 0;">
+													<li><a href="https://web.facebook.com/tvprocampo?locale=es_LA" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+													<li><a href="https://www.instagram.com/procampotv/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+													<li><a href="https://www.youtube.com/@procampotv1278" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+												</ul>
+											</li>
+										</ul>
+									</section>
+								</div>
+
+								<!-- Copyright -->
+								<div class="copyright" style="margin: 0;">
+									<ul class="menu">
+										<li>&copy; Procampo. Todos los derechos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/equalheight.js"></script>
+			<script src="assets/js/logo-carousel.js"></script>
+			<script src="assets/js/auto-logo-slider.js"></script>
+			<script>
+				// Function to animate number counting with brief initial pause
+				function animateNumber(element, start, end, duration) {
+					let startTimestamp = null;
+					const step = (timestamp) => {
+						if (!startTimestamp) startTimestamp = timestamp;
+						const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+						
+						// Custom easing function with brief pause then rapid acceleration
+						const customEase = (t) => {
+							// Brief pause at start (just 0.3 seconds)
+							if (t < 0.05) {
+								return 0;
+							}
+							// Very rapid increase phase
+							else if (t < 0.5) {
+								const accelerationProgress = (t - 0.05) / 0.45;
+								// More aggressive exponential acceleration
+								return 0.8 * Math.pow(accelerationProgress, 1.2);
+							}
+							// Gradual approach to final number
+							else {
+								const decelerationProgress = (t - 0.5) / 0.5;
+								// Smooth deceleration curve
+								return 0.8 + 0.2 * (1 - Math.pow(1 - decelerationProgress, 5));
+							}
+						};
+
+						const easedProgress = customEase(progress);
+						const currentNumber = Math.floor(easedProgress * (end - start) + start);
+						
+						element.textContent = currentNumber.toLocaleString('es-AR');
+						if (progress < 1) {
+							window.requestAnimationFrame(step);
+						}
+					};
+					window.requestAnimationFrame(step);
+				}
+
+				// Add 3D card effect
+				document.addEventListener('DOMContentLoaded', function() {
+					const cards = document.querySelectorAll('.card-3d');
+					
+					cards.forEach(card => {
+						card.addEventListener('mousemove', function(e) {
+							const rect = card.getBoundingClientRect();
+							const x = e.clientX - rect.left;
+							const y = e.clientY - rect.top;
+							
+							const centerX = rect.width / 2;
+							const centerY = rect.height / 2;
+							
+							const rotateX = (y - centerY) / 20;
+							const rotateY = (centerX - x) / 20;
+							
+							card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+						});
+						
+						card.addEventListener('mouseleave', function() {
+							card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+						});
+					});
+				});
+
+				// Create an Intersection Observer with more specific options
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const numberElement = document.getElementById('animated-number');
+							animateNumber(numberElement, 0, 17820000, 6000); // 6 seconds total duration
+							observer.unobserve(entry.target);
+						}
+					});
+				}, {
+					threshold: 0.7,
+					rootMargin: '50px'
+				});
+
+				// Create another observer for fade-in-up animation
+				const fadeObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('visible');
+							fadeObserver.unobserve(entry.target);
+						}
+					});
+				}, {
+					threshold: 0.2,
+					rootMargin: '50px'
+				});
+
+				// Start observing elements
+				observer.observe(document.getElementById('animated-number'));
+				fadeObserver.observe(document.querySelector('.fade-in-up'));
+			</script>
+
+	</body>
+</html>
