@@ -1,0 +1,409 @@
+/* Override mobile navigation panel styles */
+#navPanel, #titleBar {
+display: none !important;
+}
+
+@media screen and (max-width: 736px) {
+#navPanel {
+display: block !important;
+-moz-transform: translateY(-100vh) !important;
+-webkit-transform: translateY(-100vh) !important;
+-ms-transform: translateY(-100vh) !important;
+transform: translateY(-100vh) !important;
+}
+
+#titleBar {
+display: block !important;
+}
+
+body.navPanel-visible #navPanel {
+-moz-transform: translateY(0) !important;
+-webkit-transform: translateY(0) !important;
+-ms-transform: translateY(0) !important;
+transform: translateY(0) !important;
+}
+}
+
+/* Header video adjustments */
+#header {
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100vh;
+}
+
+#header video#header-video {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+transform: translate(-50%, -50%);
+object-fit: cover;
+object-position: center;
+}
+
+.fade-in-up {
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+#main strong {
+color: #aad568;
+font-weight: 600;
+}
+
+.button.conoce-mas:hover {
+background-color: #7ea93e !important;
+}
+
+/* 3D Card Effect Styles */
+.card-3d {
+position: relative;
+z-index: 2;
+transform-style: preserve-3d;
+transform: perspective(1000px);
+transition: transform 0.1s ease-out;
+will-change: transform;
+height: 400px;
+display: flex;
+flex-direction: column;
+padding: 2em 2em 3em 2em;
+margin-bottom: 2em;
+background: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+
+.card-3d .image.featured {
+flex: 0 0 auto;
+margin-bottom: 1.5em;
+}
+
+.card-3d .image.featured img {
+transition: transform 0.1s ease-out;
+will-change: transform;
+height: 180px;
+object-fit: contain;
+}
+
+.card-3d header {
+flex: 0 0 auto;
+margin-bottom: 1em;
+}
+
+.card-3d p {
+flex: 1 1 auto;
+margin: 0;
+display: flex;
+align-items: flex-start;
+line-height: 1.6;
+padding-bottom: 1em;
+}
+
+.card-3d:hover {
+transform: perspective(1000px) scale(1.02);
+}
+
+/* Section Transition Styles */
+.wrapper.style2 {
+position: relative;
+padding: 6em 0 8em 0;
+margin: 0;
+background: linear-gradient(to bottom,
+rgba(255, 255, 255, 1) 0%,
+rgba(255, 255, 255, 1) 5%,
+rgba(255, 255, 255, 1) 10%,
+rgba(255, 255, 255, 1) 15%,
+rgba(255, 255, 255, 0.998) 20%,
+rgba(255, 255, 255, 0.996) 22%,
+rgba(255, 255, 255, 0.994) 24%,
+rgba(255, 255, 255, 0.992) 26%,
+rgba(255, 255, 255, 0.99) 28%,
+rgba(255, 255, 255, 0.988) 30%,
+rgba(255, 255, 255, 0.986) 32%,
+rgba(255, 255, 255, 0.984) 34%,
+rgba(255, 255, 255, 0.982) 36%,
+rgba(255, 255, 255, 0.98) 38%,
+rgba(255, 255, 255, 0.975) 40%,
+rgba(255, 255, 255, 0.97) 42%,
+rgba(255, 255, 255, 0.965) 44%,
+rgba(255, 255, 255, 0.96) 46%,
+rgba(255, 255, 255, 0.955) 48%,
+rgba(255, 255, 255, 0.95) 50%,
+rgba(255, 255, 255, 0.945) 51%,
+rgba(255, 255, 255, 0.94) 52%,
+rgba(255, 255, 255, 0.935) 53%,
+rgba(255, 255, 255, 0.93) 54%,
+rgba(255, 255, 255, 0.925) 55%,
+rgba(255, 255, 255, 0.92) 56%,
+rgba(255, 255, 255, 0.915) 57%,
+rgba(255, 255, 255, 0.91) 58%,
+rgba(255, 255, 255, 0.905) 59%,
+rgba(255, 255, 255, 0.9) 60%,
+rgba(255, 255, 255, 0.89) 61%,
+rgba(255, 255, 255, 0.88) 62%,
+rgba(255, 255, 255, 0.87) 63%,
+rgba(255, 255, 255, 0.86) 64%,
+rgba(255, 255, 255, 0.85) 65%,
+rgba(255, 255, 255, 0.84) 66%,
+rgba(255, 255, 255, 0.83) 67%,
+rgba(255, 255, 255, 0.82) 68%,
+rgba(255, 255, 255, 0.81) 69%,
+rgba(255, 255, 255, 0.8) 70%,
+rgba(255, 255, 255, 0.75) 71%,
+rgba(255, 255, 255, 0.7) 72%,
+rgba(255, 255, 255, 0.65) 73%,
+rgba(255, 255, 255, 0.6) 74%,
+rgba(255, 255, 255, 0.55) 75%,
+rgba(62, 106, 9, 0.1) 76%,
+rgba(62, 106, 9, 0.15) 77%,
+rgba(62, 106, 9, 0.2) 78%,
+rgba(62, 106, 9, 0.25) 79%,
+rgba(62, 106, 9, 0.3) 80%,
+rgba(62, 106, 9, 0.35) 81%,
+rgba(62, 106, 9, 0.4) 82%,
+rgba(62, 106, 9, 0.45) 83%,
+rgba(62, 106, 9, 0.5) 84%,
+rgba(62, 106, 9, 0.55) 85%,
+rgba(62, 106, 9, 0.6) 86%,
+rgba(62, 106, 9, 0.65) 87%,
+rgba(62, 106, 9, 0.7) 88%,
+rgba(62, 106, 9, 0.75) 89%,
+rgba(62, 106, 9, 0.8) 90%,
+rgba(62, 106, 9, 0.82) 91%,
+rgba(62, 106, 9, 0.84) 92%,
+rgba(62, 106, 9, 0.86) 93%,
+rgba(62, 106, 9, 0.88) 94%,
+rgba(62, 106, 9, 0.9) 95%,
+rgba(62, 106, 9, 0.92) 96%,
+rgba(62, 106, 9, 0.94) 97%,
+rgba(62, 106, 9, 0.96) 98%,
+rgba(62, 106, 9, 0.98) 99%,
+rgba(62, 106, 9, 1) 100%
+);
+}
+
+.wrapper.style1 {
+position: relative;
+background: #3e6a09;
+padding: 6em 0;
+margin: 0;
+margin-top: -1px;
+}
+
+/* Override any default wrapper margins */
+.wrapper {
+margin: 0;
+padding: 6em 0;
+}
+
+/* Ensure smooth connection between sections */
+.wrapper + .wrapper {
+margin-top: -1px;
+}
+
+/* Container positioning */
+.container {
+position: relative;
+}
+
+.dropdown-card {
+transition: all 0.3s ease;
+min-height: 70px;
+}
+
+.dropdown-card:hover {
+transform: translateY(-2px);
+}
+
+.card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 0.5em;
+}
+
+.arrow-down {
+font-size: 0.8em;
+transition: transform 0.3s ease;
+}
+
+.card-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+padding-top: 0;
+opacity: 0;
+transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding-top 0.3s ease-out;
+}
+
+.dropdown-card.active .arrow-down {
+transform: rotate(180deg);
+}
+
+.dropdown-card.active .card-content {
+max-height: 200px;
+opacity: 1;
+padding-top: 1em;
+}
+
+.dropdown-card p {
+margin: 0;
+line-height: 1.6;
+}
+
+.features-title {
+color: #ffffff !important;
+}
+
+.features-title strong {
+color: #ffffff !important;
+}
+
+.wrapper.style1 h2,
+.wrapper.style1 h2 strong {
+color: #ffffff !important;
+}
+/* Custom classes extracted from inline styles */
+.header-logo {
+max-width: 400px;
+margin: 0 auto;
+display: block;
+}
+
+#banner {
+padding: 1em 0 2em 0;
+}
+
+.banner-logo {
+max-width: 300px;
+margin: 0 auto;
+display: block;
+}
+
+.institution-subtitle {
+text-align: center;
+margin: 2em 0 0.5em;
+font-size: 1em;
+color: #3e6a09;
+}
+
+.institution-title {
+text-align: center;
+margin: 0 0 2em;
+font-size: 2em;
+color: #484d55;
+}
+
+.cards-container {
+margin-top: 4em;
+}
+
+.card-3d {
+background: #f8f8f8;
+padding: 2em;
+border-radius: 0.5em;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-3d .image.featured {
+margin: 0 auto 2em;
+width: 80%;
+max-width: 300px;
+}
+
+.card-3d .image.featured img {
+border-radius: 0.3em;
+}
+
+.features-wrapper {
+padding-top: 1em;
+}
+
+.features-wrapper .major {
+margin-bottom: 1em;
+text-align: center;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5em;
+padding: 0 2em;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.feature-column {
+display: flex;
+flex-direction: column;
+}
+
+.dropdown-card {
+width: 100%;
+background: #f8f8f8;
+padding: 1.5em 2em;
+border-radius: 0.5em;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+cursor: pointer;
+margin-bottom: 18px;
+}
+
+.dropdown-card h3 {
+margin: 0;
+padding-top: 0.5em;
+}
+
+#footer {
+padding: 2em 0 1em 0;
+}
+
+.footer-flex {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+margin: 0 0 1em 0;
+gap: 4em;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.footer-nav,
+.contact {
+flex: 0 1 auto;
+}
+
+.footer-menu,
+.contact-list {
+list-style: none;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+
+.footer-menu li,
+.contact-list li {
+margin: 0.5em 0;
+}
+
+.footer-link {
+color: rgba(255, 255, 255, 0.8);
+text-decoration: none;
+}
+
+.icons {
+justify-content: center;
+margin: 0;
+}
+
+.copyright {
+margin: 0;
+}
