@@ -39,6 +39,25 @@
 				}
 			}
 
+			/* Header video adjustments */
+			#header {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				height: 100vh;
+			}
+
+			#header video#header-video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				transform: translate(-50%, -50%);
+				object-fit: cover;
+				object-position: center;
+			}
+
 			.fade-in-up {
 				opacity: 0;
 				transform: translateY(50px);
@@ -307,7 +326,7 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
+				<section id="banner" style="padding: 1em 0 2em 0;">
 					<header>
 						<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 300px; margin: 0 auto; display: block;">
 						<p>
@@ -406,39 +425,90 @@
 				</div>
 
 			<!-- Features -->
-				<div class="wrapper style1">
+				<div class="wrapper style1" style="padding-top: 1em;">
 					<div class="container">
-						<header class="major" style="margin-bottom: 3em; text-align: center;">
+						<header class="major" style="margin-bottom: 1em; text-align: center;">
 							<h2 class="features-title" style="color: #ffffff !important;"><strong>CARACTERÍSTICAS PRINCIPALES</strong></h2>
 						</header>
-						<div style="display: flex; flex-direction: column; gap: 0.3em; padding: 0 2em; max-width: 500px; margin: 0 auto;">
-							<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
-								<div class="card-header">
-									<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Objetivo</h3>
-									<span class="arrow-down">▼</span>
-								</div>
-								<div class="card-content">
-									<p>
-										Acercar el trabajo diario de
-										empresas, organizaciones públicas
-										y privadas, productores y
-										técnicos de interior del país.
-									</p>
-								</div>
-							</article>
-							<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
-								<div class="card-header">
-									<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Desafío</h3>
-									<span class="arrow-down">▼</span>
-								</div>
-								<div class="card-content">
-									<p>
-										Brindar un producto de calidad
-										que acompañe el permanente
-										crecimiento del sector.			
-									</p>
-								</div>
-							</article>
+						<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5em; padding: 0 2em; max-width: 1000px; margin: 0 auto;">
+							<!-- Column 1 -->
+							<div style="display: flex; flex-direction: column;">
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Objetivo</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Acercar el trabajo diario de
+											empresas, organizaciones públicas
+											y privadas, productores y
+											técnicos de interior del país.
+										</p>
+									</div>
+								</article>
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Card 2</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Content for Card 2
+										</p>
+									</div>
+								</article>
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Card 3</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Content for Card 3
+										</p>
+									</div>
+								</article>
+							</div>
+							
+							<!-- Column 2 -->
+							<div style="display: flex; flex-direction: column;">
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Desafío</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Brindar un producto de calidad
+											que acompañe el permanente
+											crecimiento del sector.			
+										</p>
+									</div>
+								</article>
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Card 5</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Content for Card 5
+										</p>
+									</div>
+								</article>
+								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+									<div class="card-header">
+										<h3 style="margin: 0; padding-top: 0.5em;">Card 6</h3>
+										<span class="arrow-down">▼</span>
+									</div>
+									<div class="card-content">
+										<p>
+											Content for Card 6
+										</p>
+									</div>
+								</article>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -503,9 +573,10 @@
 									<section style="flex: 0 1 auto;">
 										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
 											<li style="margin: 0.5em 0;"><a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a></li>
-											<li style="margin: 0.5em 0;"><a href="left-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Left Sidebar</a></li>
-											<li style="margin: 0.5em 0;"><a href="right-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Right Sidebar</a></li>
-											<li style="margin: 0.5em 0;"><a href="no-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">No Sidebar</a></li>
+											<li style="margin: 0.5em 0;"><a href="left-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Agricultura</a></li>
+											<li style="margin: 0.5em 0;"><a href="right-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Ganadería</a></li>
+											<li style="margin: 0.5em 0;"><a href="no-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Maquinaria</a></li>
+											<li style="margin: 0.5em 0;"><a href="no-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Novedades</a></li>
 										</ul>
 									</section>
 
