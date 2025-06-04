@@ -61,39 +61,211 @@
 
 			/* 3D Card Effect Styles */
 			.card-3d {
+				position: relative;
+				z-index: 2;
 				transform-style: preserve-3d;
 				transform: perspective(1000px);
 				transition: transform 0.1s ease-out;
 				will-change: transform;
-				height: 400px; /* Fixed height for all cards */
+				height: 400px;
 				display: flex;
 				flex-direction: column;
+				padding: 2em 2em 3em 2em;
+				margin-bottom: 2em;
+				background: rgba(255, 255, 255, 0.7);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
 			}
 
 			.card-3d .image.featured {
-				flex: 0 0 auto; /* Don't allow image to flex */
+				flex: 0 0 auto;
+				margin-bottom: 1.5em;
 			}
 
 			.card-3d .image.featured img {
 				transition: transform 0.1s ease-out;
 				will-change: transform;
-				height: 200px; /* Fixed height for images */
+				height: 180px;
 				object-fit: contain;
 			}
 
 			.card-3d header {
-				flex: 0 0 auto; /* Don't allow header to flex */
+				flex: 0 0 auto;
+				margin-bottom: 1em;
 			}
 
 			.card-3d p {
-				flex: 1 1 auto; /* Allow paragraph to take remaining space */
+				flex: 1 1 auto;
 				margin: 0;
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
+				line-height: 1.6;
+				padding-bottom: 1em;
 			}
 
 			.card-3d:hover {
 				transform: perspective(1000px) scale(1.02);
+			}
+
+			/* Section Transition Styles */
+			.wrapper.style2 {
+				position: relative;
+				padding: 6em 0 8em 0;
+				margin: 0;
+				background: linear-gradient(to bottom,
+					rgba(255, 255, 255, 1) 0%,
+					rgba(255, 255, 255, 1) 5%,
+					rgba(255, 255, 255, 1) 10%,
+					rgba(255, 255, 255, 1) 15%,
+					rgba(255, 255, 255, 0.998) 20%,
+					rgba(255, 255, 255, 0.996) 22%,
+					rgba(255, 255, 255, 0.994) 24%,
+					rgba(255, 255, 255, 0.992) 26%,
+					rgba(255, 255, 255, 0.99) 28%,
+					rgba(255, 255, 255, 0.988) 30%,
+					rgba(255, 255, 255, 0.986) 32%,
+					rgba(255, 255, 255, 0.984) 34%,
+					rgba(255, 255, 255, 0.982) 36%,
+					rgba(255, 255, 255, 0.98) 38%,
+					rgba(255, 255, 255, 0.975) 40%,
+					rgba(255, 255, 255, 0.97) 42%,
+					rgba(255, 255, 255, 0.965) 44%,
+					rgba(255, 255, 255, 0.96) 46%,
+					rgba(255, 255, 255, 0.955) 48%,
+					rgba(255, 255, 255, 0.95) 50%,
+					rgba(255, 255, 255, 0.945) 51%,
+					rgba(255, 255, 255, 0.94) 52%,
+					rgba(255, 255, 255, 0.935) 53%,
+					rgba(255, 255, 255, 0.93) 54%,
+					rgba(255, 255, 255, 0.925) 55%,
+					rgba(255, 255, 255, 0.92) 56%,
+					rgba(255, 255, 255, 0.915) 57%,
+					rgba(255, 255, 255, 0.91) 58%,
+					rgba(255, 255, 255, 0.905) 59%,
+					rgba(255, 255, 255, 0.9) 60%,
+					rgba(255, 255, 255, 0.89) 61%,
+					rgba(255, 255, 255, 0.88) 62%,
+					rgba(255, 255, 255, 0.87) 63%,
+					rgba(255, 255, 255, 0.86) 64%,
+					rgba(255, 255, 255, 0.85) 65%,
+					rgba(255, 255, 255, 0.84) 66%,
+					rgba(255, 255, 255, 0.83) 67%,
+					rgba(255, 255, 255, 0.82) 68%,
+					rgba(255, 255, 255, 0.81) 69%,
+					rgba(255, 255, 255, 0.8) 70%,
+					rgba(255, 255, 255, 0.75) 71%,
+					rgba(255, 255, 255, 0.7) 72%,
+					rgba(255, 255, 255, 0.65) 73%,
+					rgba(255, 255, 255, 0.6) 74%,
+					rgba(255, 255, 255, 0.55) 75%,
+					rgba(62, 106, 9, 0.1) 76%,
+					rgba(62, 106, 9, 0.15) 77%,
+					rgba(62, 106, 9, 0.2) 78%,
+					rgba(62, 106, 9, 0.25) 79%,
+					rgba(62, 106, 9, 0.3) 80%,
+					rgba(62, 106, 9, 0.35) 81%,
+					rgba(62, 106, 9, 0.4) 82%,
+					rgba(62, 106, 9, 0.45) 83%,
+					rgba(62, 106, 9, 0.5) 84%,
+					rgba(62, 106, 9, 0.55) 85%,
+					rgba(62, 106, 9, 0.6) 86%,
+					rgba(62, 106, 9, 0.65) 87%,
+					rgba(62, 106, 9, 0.7) 88%,
+					rgba(62, 106, 9, 0.75) 89%,
+					rgba(62, 106, 9, 0.8) 90%,
+					rgba(62, 106, 9, 0.82) 91%,
+					rgba(62, 106, 9, 0.84) 92%,
+					rgba(62, 106, 9, 0.86) 93%,
+					rgba(62, 106, 9, 0.88) 94%,
+					rgba(62, 106, 9, 0.9) 95%,
+					rgba(62, 106, 9, 0.92) 96%,
+					rgba(62, 106, 9, 0.94) 97%,
+					rgba(62, 106, 9, 0.96) 98%,
+					rgba(62, 106, 9, 0.98) 99%,
+					rgba(62, 106, 9, 1) 100%
+				);
+			}
+
+			.wrapper.style1 {
+				position: relative;
+				background: #3e6a09;
+				padding: 6em 0;
+				margin: 0;
+				margin-top: -1px;
+			}
+
+			/* Override any default wrapper margins */
+			.wrapper {
+				margin: 0;
+				padding: 6em 0;
+			}
+
+			/* Ensure smooth connection between sections */
+			.wrapper + .wrapper {
+				margin-top: -1px;
+			}
+
+			/* Container positioning */
+			.container {
+				position: relative;
+			}
+
+			.dropdown-card {
+				transition: all 0.3s ease;
+				min-height: 70px;
+			}
+
+			.dropdown-card:hover {
+				transform: translateY(-2px);
+			}
+
+			.card-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 0.5em;
+			}
+
+			.arrow-down {
+				font-size: 0.8em;
+				transition: transform 0.3s ease;
+			}
+
+			.card-content {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+				padding-top: 0;
+				opacity: 0;
+				transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding-top 0.3s ease-out;
+			}
+
+			.dropdown-card.active .arrow-down {
+				transform: rotate(180deg);
+			}
+
+			.dropdown-card.active .card-content {
+				max-height: 200px;
+				opacity: 1;
+				padding-top: 1em;
+			}
+
+			.dropdown-card p {
+				margin: 0;
+				line-height: 1.6;
+			}
+
+			.features-title {
+				color: #ffffff !important;
+			}
+
+			.features-title strong {
+				color: #ffffff !important;
+			}
+
+			.wrapper.style1 h2,
+			.wrapper.style1 h2 strong {
+				color: #ffffff !important;
 			}
 		</style>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,10 +296,11 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="index.html">Sobre Nosotros</a></li>
+								<li><a href="left-sidebar.html">Agricultura</a></li>
+								<li><a href="right-sidebar.html">Ganadería</a></li>
+								<li><a href="right-sidebar.html">Maquinaria</a></li>
+								<li><a href="no-sidebar.html">Novedades</a></li>
 							</ul>
 						</nav>
 
@@ -138,7 +311,7 @@
 					<header>
 						<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 300px; margin: 0 auto; display: block;">
 						<p>
-							Una productora de TV que desde hace dieciséis años y de manera semanal, desarrolla desde
+							Una productora de TV que desde hace veinticinco años y de manera semanal, desarrolla desde
 							la provincia de Córdoba una amplia gama de temas relacionados con los distintos sectores
 							productivos del Campo Argentino.
 						</p>
@@ -146,7 +319,8 @@
 				</section>
 
 			<!-- Auto Logo Slider -->
-				<h4 style="text-align: center; margin: 2em 0 2em; font-size: 1.5em; color: #484d55;">Organizaciones Con las que Trabajamos</h4>
+				<h6 style="text-align: center; margin: 2em 0 0.5em; font-size: 1em; color: #3e6a09;">Vinculos institucionales</h6>
+				<h4 style="text-align: center; margin: 0 0 2em; font-size: 2em; color: #484d55;">Organizaciones con las que trabajamos</h4>
 				<div class="auto-logo-slider">
 					<div class="slider-track">
 						<div class="slide">
@@ -196,9 +370,6 @@
 								Solo en Argentina <strong id="animated-number">17.820.000</strong> personas.
 							</p>
 						</header>
-						<footer>
-							<a href="#" class="button">Continue Reading</a>
-						</footer>
 					</article>
 
 					<div class="container" style="margin-top: 4em;">
@@ -212,7 +383,7 @@
 										<h3><a href="#">Procampo TV</a></h3>
 									</header>
 									<p>
-										En señales Satelitales: Canal Rural (Domingo 12,00 hs lunes 10 hs martes 20,00 hs  jueves 16,00 hs)
+										En señales Satelitales: Canal Rural (Domingo 12,00 hs lunes 10 hs martes 23,00 hs  jueves 16,00 hs)
 									</p>
 								</article>
 							</div>
@@ -225,7 +396,7 @@
 										<h3><a href="https://www.cba24n.com.ar/programa/campo-activo">Campo Activo</a></h3>
 									</header>
 									<p>
-										En Señal de Aire: Canal 10 de Córdoba (Domingo 11,30 hs)
+										En Señal de Aire: Canal 10 de Córdoba (Domingo 15,30 hs)
 									</p>
 								</article>
 							</div>
@@ -237,27 +408,36 @@
 			<!-- Features -->
 				<div class="wrapper style1">
 					<div class="container">
-						<div style="display: flex; gap: 2em; padding: 0 2em;">
-							<article style="flex: 1; background: #f8f8f8; padding: 3em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-								<header>
-									<h3>Nuestro Objetivo</h3>
-								</header>
-								<p>
-									Acercar el trabajo diario de
-									empresas, organizaciones públicas
-									y privadas, productores y
-									técnicos de interior del país.
-								</p>
+						<header class="major" style="margin-bottom: 3em; text-align: center;">
+							<h2 class="features-title" style="color: #ffffff !important;"><strong>CARACTERÍSTICAS PRINCIPALES</strong></h2>
+						</header>
+						<div style="display: flex; flex-direction: column; gap: 0.3em; padding: 0 2em; max-width: 500px; margin: 0 auto;">
+							<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+								<div class="card-header">
+									<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Objetivo</h3>
+									<span class="arrow-down">▼</span>
+								</div>
+								<div class="card-content">
+									<p>
+										Acercar el trabajo diario de
+										empresas, organizaciones públicas
+										y privadas, productores y
+										técnicos de interior del país.
+									</p>
+								</div>
 							</article>
-							<article style="flex: 1; background: #f8f8f8; padding: 3em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-								<header>
-									<h3>Nuestro Desafío</h3>
-								</header>
-								<p>
-									Brindar un producto de calidad
-									que acompañe el permanente
-									crecimiento del sector.			
-								</p>
+							<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+								<div class="card-header">
+									<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Desafío</h3>
+									<span class="arrow-down">▼</span>
+								</div>
+								<div class="card-content">
+									<p>
+										Brindar un producto de calidad
+										que acompañe el permanente
+										crecimiento del sector.			
+									</p>
+								</div>
 							</article>
 						</div>
 					</div>
@@ -271,29 +451,7 @@
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/logoProcampo.png" alt="" /></a>
-							<header>
-								<h3><a href="#">Procampo TV</a></h3>
-							</header>
-							<p>
-								En señales Satelitales: Canal Rural (Domingo 12,00 hs; lunes 10 hs;martes 20,00 hs; jueves 16,00 hs)
-							</p>
-						</article>
-
-						<article>
-							<a href="https://www.cba24n.com.ar/programa/campo-activo" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<a href="https://www.cba24n.com.ar/programa/campo-activo">
-									<h3>Campo Activo</h3>
-								</a>
-							</header>
-							<p>
-								En Señal de Aire: Canal 10 de Córdoba (Domingo 11,30 hs)
-							</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/tecnomyl2.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/osmo2.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Generación de contenido técnico</a></h3>
 							</header>
@@ -309,7 +467,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/tecnomyl3.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/vaca.jpeg" alt="" /></a>
 							<header>
 								<h3><a href="#">Transmisiones en vivo multiplataforma</a></h3>
 							</header>
@@ -327,7 +485,7 @@
 						<article>
 							<a href="#" class="image featured"><img src="images/tecnomyl2.jpg" alt="" /></a>
 							<header>
-								<h3><a href="#">Acciones comerciales en tandas publicitarias</a></h3>
+								<h3><a href="#">Producción de videos institucionales</a></h3>
 							</header>
 							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
 						</article>
@@ -341,11 +499,21 @@
 						<div class="row">
 							<div class="col-12">
 								<div style="display: flex; justify-content: center; align-items: flex-start; margin: 0 0 1em 0; gap: 4em; max-width: 800px; margin-left: auto; margin-right: auto;">
+									<!-- Navigation -->
+									<section style="flex: 0 1 auto;">
+										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+											<li style="margin: 0.5em 0;"><a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a></li>
+											<li style="margin: 0.5em 0;"><a href="left-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Left Sidebar</a></li>
+											<li style="margin: 0.5em 0;"><a href="right-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Right Sidebar</a></li>
+											<li style="margin: 0.5em 0;"><a href="no-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">No Sidebar</a></li>
+										</ul>
+									</section>
+
 									<!-- Contact -->
 									<section class="contact" style="flex: 0 1 auto;">
 										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
 											<li style="margin: 0.5em 0;"><h6 style="color: #ffffff; margin: 0;">Nuestras redes sociales</h6></li>
-											<li style="margin: 0.5em 0;">
+											<li sty	le="margin: 0.5em 0;">
 												<ul class="icons" style="justify-content: center; margin: 0;">
 													<li><a href="https://web.facebook.com/tvprocampo?locale=es_LA" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 													<li><a href="https://www.instagram.com/procampotv/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -476,6 +644,16 @@
 				// Start observing elements
 				observer.observe(document.getElementById('animated-number'));
 				fadeObserver.observe(document.querySelector('.fade-in-up'));
+
+				document.addEventListener('DOMContentLoaded', function() {
+					const dropdownCards = document.querySelectorAll('.dropdown-card');
+					
+					dropdownCards.forEach(card => {
+						card.addEventListener('click', function() {
+							this.classList.toggle('active');
+						});
+					});
+				});
 			</script>
 
 	</body>
