@@ -12,281 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="stylesheet" href="assets/css/auto-logo-slider.css" />
-		<style>
-			/* Override mobile navigation panel styles */
-			#navPanel, #titleBar {
-				display: none !important;
-			}
-
-			@media screen and (max-width: 736px) {
-				#navPanel {
-					display: block !important;
-					-moz-transform: translateY(-100vh) !important;
-					-webkit-transform: translateY(-100vh) !important;
-					-ms-transform: translateY(-100vh) !important;
-					transform: translateY(-100vh) !important;
-				}
-
-				#titleBar {
-					display: block !important;
-				}
-
-				body.navPanel-visible #navPanel {
-					-moz-transform: translateY(0) !important;
-					-webkit-transform: translateY(0) !important;
-					-ms-transform: translateY(0) !important;
-					transform: translateY(0) !important;
-				}
-			}
-
-			/* Header video adjustments */
-			#header {
-				position: relative;
-				overflow: hidden;
-				width: 100%;
-				height: 100vh;
-			}
-
-			#header video#header-video {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 100%;
-				height: 100%;
-				transform: translate(-50%, -50%);
-				object-fit: cover;
-				object-position: center;
-			}
-
-			.fade-in-up {
-				opacity: 0;
-				transform: translateY(50px);
-				transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-			}
-
-			.fade-in-up.visible {
-				opacity: 1;
-				transform: translateY(0);
-			}
-
-			#main strong {
-				color: #aad568;
-				font-weight: 600;
-			}
-
-			.button.conoce-mas:hover {
-				background-color: #7ea93e !important;
-			}
-
-			/* 3D Card Effect Styles */
-			.card-3d {
-				position: relative;
-				z-index: 2;
-				transform-style: preserve-3d;
-				transform: perspective(1000px);
-				transition: transform 0.1s ease-out;
-				will-change: transform;
-				height: 400px;
-				display: flex;
-				flex-direction: column;
-				padding: 2em 2em 3em 2em;
-				margin-bottom: 2em;
-				background: rgba(255, 255, 255, 0.7);
-				backdrop-filter: blur(10px);
-				-webkit-backdrop-filter: blur(10px);
-			}
-
-			.card-3d .image.featured {
-				flex: 0 0 auto;
-				margin-bottom: 1.5em;
-			}
-
-			.card-3d .image.featured img {
-				transition: transform 0.1s ease-out;
-				will-change: transform;
-				height: 180px;
-				object-fit: contain;
-			}
-
-			.card-3d header {
-				flex: 0 0 auto;
-				margin-bottom: 1em;
-			}
-
-			.card-3d p {
-				flex: 1 1 auto;
-				margin: 0;
-				display: flex;
-				align-items: flex-start;
-				line-height: 1.6;
-				padding-bottom: 1em;
-			}
-
-			.card-3d:hover {
-				transform: perspective(1000px) scale(1.02);
-			}
-
-			/* Section Transition Styles */
-			.wrapper.style2 {
-				position: relative;
-				padding: 6em 0 8em 0;
-				margin: 0;
-				background: linear-gradient(to bottom,
-					rgba(255, 255, 255, 1) 0%,
-					rgba(255, 255, 255, 1) 5%,
-					rgba(255, 255, 255, 1) 10%,
-					rgba(255, 255, 255, 1) 15%,
-					rgba(255, 255, 255, 0.998) 20%,
-					rgba(255, 255, 255, 0.996) 22%,
-					rgba(255, 255, 255, 0.994) 24%,
-					rgba(255, 255, 255, 0.992) 26%,
-					rgba(255, 255, 255, 0.99) 28%,
-					rgba(255, 255, 255, 0.988) 30%,
-					rgba(255, 255, 255, 0.986) 32%,
-					rgba(255, 255, 255, 0.984) 34%,
-					rgba(255, 255, 255, 0.982) 36%,
-					rgba(255, 255, 255, 0.98) 38%,
-					rgba(255, 255, 255, 0.975) 40%,
-					rgba(255, 255, 255, 0.97) 42%,
-					rgba(255, 255, 255, 0.965) 44%,
-					rgba(255, 255, 255, 0.96) 46%,
-					rgba(255, 255, 255, 0.955) 48%,
-					rgba(255, 255, 255, 0.95) 50%,
-					rgba(255, 255, 255, 0.945) 51%,
-					rgba(255, 255, 255, 0.94) 52%,
-					rgba(255, 255, 255, 0.935) 53%,
-					rgba(255, 255, 255, 0.93) 54%,
-					rgba(255, 255, 255, 0.925) 55%,
-					rgba(255, 255, 255, 0.92) 56%,
-					rgba(255, 255, 255, 0.915) 57%,
-					rgba(255, 255, 255, 0.91) 58%,
-					rgba(255, 255, 255, 0.905) 59%,
-					rgba(255, 255, 255, 0.9) 60%,
-					rgba(255, 255, 255, 0.89) 61%,
-					rgba(255, 255, 255, 0.88) 62%,
-					rgba(255, 255, 255, 0.87) 63%,
-					rgba(255, 255, 255, 0.86) 64%,
-					rgba(255, 255, 255, 0.85) 65%,
-					rgba(255, 255, 255, 0.84) 66%,
-					rgba(255, 255, 255, 0.83) 67%,
-					rgba(255, 255, 255, 0.82) 68%,
-					rgba(255, 255, 255, 0.81) 69%,
-					rgba(255, 255, 255, 0.8) 70%,
-					rgba(255, 255, 255, 0.75) 71%,
-					rgba(255, 255, 255, 0.7) 72%,
-					rgba(255, 255, 255, 0.65) 73%,
-					rgba(255, 255, 255, 0.6) 74%,
-					rgba(255, 255, 255, 0.55) 75%,
-					rgba(62, 106, 9, 0.1) 76%,
-					rgba(62, 106, 9, 0.15) 77%,
-					rgba(62, 106, 9, 0.2) 78%,
-					rgba(62, 106, 9, 0.25) 79%,
-					rgba(62, 106, 9, 0.3) 80%,
-					rgba(62, 106, 9, 0.35) 81%,
-					rgba(62, 106, 9, 0.4) 82%,
-					rgba(62, 106, 9, 0.45) 83%,
-					rgba(62, 106, 9, 0.5) 84%,
-					rgba(62, 106, 9, 0.55) 85%,
-					rgba(62, 106, 9, 0.6) 86%,
-					rgba(62, 106, 9, 0.65) 87%,
-					rgba(62, 106, 9, 0.7) 88%,
-					rgba(62, 106, 9, 0.75) 89%,
-					rgba(62, 106, 9, 0.8) 90%,
-					rgba(62, 106, 9, 0.82) 91%,
-					rgba(62, 106, 9, 0.84) 92%,
-					rgba(62, 106, 9, 0.86) 93%,
-					rgba(62, 106, 9, 0.88) 94%,
-					rgba(62, 106, 9, 0.9) 95%,
-					rgba(62, 106, 9, 0.92) 96%,
-					rgba(62, 106, 9, 0.94) 97%,
-					rgba(62, 106, 9, 0.96) 98%,
-					rgba(62, 106, 9, 0.98) 99%,
-					rgba(62, 106, 9, 1) 100%
-				);
-			}
-
-			.wrapper.style1 {
-				position: relative;
-				background: #3e6a09;
-				padding: 6em 0;
-				margin: 0;
-				margin-top: -1px;
-			}
-
-			/* Override any default wrapper margins */
-			.wrapper {
-				margin: 0;
-				padding: 6em 0;
-			}
-
-			/* Ensure smooth connection between sections */
-			.wrapper + .wrapper {
-				margin-top: -1px;
-			}
-
-			/* Container positioning */
-			.container {
-				position: relative;
-			}
-
-			.dropdown-card {
-				transition: all 0.3s ease;
-				min-height: 70px;
-			}
-
-			.dropdown-card:hover {
-				transform: translateY(-2px);
-			}
-
-			.card-header {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding-bottom: 0.5em;
-			}
-
-			.arrow-down {
-				font-size: 0.8em;
-				transition: transform 0.3s ease;
-			}
-
-			.card-content {
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.3s ease-out;
-				padding-top: 0;
-				opacity: 0;
-				transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding-top 0.3s ease-out;
-			}
-
-			.dropdown-card.active .arrow-down {
-				transform: rotate(180deg);
-			}
-
-			.dropdown-card.active .card-content {
-				max-height: 200px;
-				opacity: 1;
-				padding-top: 1em;
-			}
-
-			.dropdown-card p {
-				margin: 0;
-				line-height: 1.6;
-			}
-
-			.features-title {
-				color: #ffffff !important;
-			}
-
-			.features-title strong {
-				color: #ffffff !important;
-			}
-
-			.wrapper.style1 h2,
-			.wrapper.style1 h2 strong {
-				color: #ffffff !important;
-			}
-		</style>
+                <link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -304,7 +30,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 400px; margin: 0 auto; display: block;">
+								<img src="images/logoProcampo.png" alt="Procampo Logo" class="header-logo">
 								<hr />
 							</header>
 							<footer>
@@ -324,9 +50,9 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="banner" style="padding: 1em 0 2em 0;">
+				<section id="banner">
 					<header>
-						<img src="images/logoProcampo.png" alt="Procampo Logo" style="max-width: 300px; margin: 0 auto; display: block;">
+						<img src="images/logoProcampo.png" alt="Procampo Logo" class="banner-logo">
 						<p>
 							Una productora de TV que desde hace veinticinco años y de manera semanal, desarrolla desde
 							la provincia de Córdoba una amplia gama de temas relacionados con los distintos sectores
@@ -336,8 +62,8 @@
 				</section>
 
 			<!-- Auto Logo Slider -->
-				<h6 style="text-align: center; margin: 2em 0 0.5em; font-size: 1em; color: #3e6a09;">Vinculos institucionales</h6>
-				<h4 style="text-align: center; margin: 0 0 2em; font-size: 2em; color: #484d55;">Organizaciones con las que trabajamos</h4>
+                                <h6 class="institution-subtitle">Vinculos institucionales</h6>
+                                <h4 class="institution-title">Organizaciones con las que trabajamos</h4>
 				<div class="auto-logo-slider">
 					<div class="slider-track">
 						<div class="slide">
@@ -389,12 +115,12 @@
 						</header>
 					</article>
 
-					<div class="container" style="margin-top: 4em;">
+					<div class="container cards-container">
 						<div class="row">
 							<div class="col-6 col-12-mobile">
-								<article class="special card-3d" style="background: #f8f8f8; padding: 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-									<a href="#" class="image featured" style="margin: 0 auto 2em; width: 80%; max-width: 300px;">
-										<img src="images/logoProcampo.png" alt="" style="border-radius: 0.3em;" />
+								<article class="special card-3d">
+									<a href="#" class="image featured">
+										<img src="images/logoProcampo.png" alt="" class="card-image" />
 									</a>
 									<header>
 										<h3><a href="#">Procampo TV</a></h3>
@@ -405,9 +131,9 @@
 								</article>
 							</div>
 							<div class="col-6 col-12-mobile">
-								<article class="special card-3d" style="background: #f8f8f8; padding: 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-									<a href="https://www.cba24n.com.ar/programa/campo-activo" class="image featured" style="margin: 0 auto 2em; width: 80%; max-width: 300px;">
-										<img src="images/logoProcampo.png" alt="" style="border-radius: 0.3em;" />
+								<article class="special card-3d">
+									<a href="https://www.cba24n.com.ar/programa/campo-activo" class="image featured">
+										<img src="images/logoProcampo.png" alt="" class="card-image" />
 									</a>
 									<header>
 										<h3><a href="https://www.cba24n.com.ar/programa/campo-activo">Campo Activo</a></h3>
@@ -423,17 +149,17 @@
 				</div>
 
 			<!-- Features -->
-				<div class="wrapper style1" style="padding-top: 1em;">
+				<div class="wrapper style1 features-wrapper">
 					<div class="container">
-						<header class="major" style="margin-bottom: 1em; text-align: center;">
-							<h2 class="features-title" style="color: #ffffff !important;"><strong>CARACTERÍSTICAS PRINCIPALES</strong></h2>
+						<header class="major">
+							<h2 class="features-title"><strong>CARACTERÍSTICAS PRINCIPALES</strong></h2>
 						</header>
-						<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5em; padding: 0 2em; max-width: 1000px; margin: 0 auto;">
+						<div class="features-grid">
 							<!-- Column 1 -->
-							<div style="display: flex; flex-direction: column;">
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+							<div class="feature-column">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Objetivo</h3>
+										<h3>Nuestro Objetivo</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -445,9 +171,9 @@
 										</p>
 									</div>
 								</article>
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Card 2</h3>
+										<h3>Card 2</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -456,9 +182,9 @@
 										</p>
 									</div>
 								</article>
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Card 3</h3>
+										<h3>Card 3</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -470,10 +196,10 @@
 							</div>
 							
 							<!-- Column 2 -->
-							<div style="display: flex; flex-direction: column;">
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+							<div class="feature-column">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Nuestro Desafío</h3>
+										<h3>Nuestro Desafío</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -484,9 +210,9 @@
 										</p>
 									</div>
 								</article>
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer; margin-bottom: 18px;">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Card 5</h3>
+										<h3>Card 5</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -495,9 +221,9 @@
 										</p>
 									</div>
 								</article>
-								<article class="dropdown-card" style="width: 100%; background: #f8f8f8; padding: 1.5em 2em; border-radius: 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+								<article class="dropdown-card">
 									<div class="card-header">
-										<h3 style="margin: 0; padding-top: 0.5em;">Card 6</h3>
+										<h3>Card 6</h3>
 										<span class="arrow-down">▼</span>
 									</div>
 									<div class="card-content">
@@ -562,26 +288,26 @@
 				</section>
 
 			<!-- Footer -->
-				<div id="footer" style="padding: 2em 0 1em 0;">
+				<div id="footer">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div style="display: flex; justify-content: center; align-items: flex-start; margin: 0 0 1em 0; gap: 4em; max-width: 800px; margin-left: auto; margin-right: auto;">
+								<div class="footer-flex">
 									<!-- Navigation -->
-									<section style="flex: 0 1 auto;">
-										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-											<li style="margin: 0.5em 0;"><a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a></li>
-                                                                               <li style="margin: 0.5em 0;"><a href="right-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Ganadería</a></li>
-                                                                               <li style="margin: 0.5em 0;"><a href="right-sidebar.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Maquinaria</a></li>
+									<section class="footer-nav">
+										<ul class="footer-menu">
+											<li><a href="index.html" class="footer-link">Home</a></li>
+                                                                               <li><a href="right-sidebar.html" class="footer-link">Ganadería</a></li>
+                                                                               <li><a href="right-sidebar.html" class="footer-link">Maquinaria</a></li>
 										</ul>
 									</section>
 
 									<!-- Contact -->
-									<section class="contact" style="flex: 0 1 auto;">
-										<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
-											<li style="margin: 0.5em 0;"><h6 style="color: #ffffff; margin: 0;">Nuestras redes sociales</h6></li>
-											<li sty	le="margin: 0.5em 0;">
-												<ul class="icons" style="justify-content: center; margin: 0;">
+									<section class="contact">
+										<ul class="contact-list">
+											<li class="contact-heading"><h6 >Nuestras redes sociales</h6></li>
+                                                                       <li>
+												<ul class="icons">
 													<li><a href="https://web.facebook.com/tvprocampo?locale=es_LA" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 													<li><a href="https://www.instagram.com/procampotv/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 													<li><a href="https://www.youtube.com/@procampotv1278" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
@@ -592,7 +318,7 @@
 								</div>
 
 								<!-- Copyright -->
-								<div class="copyright" style="margin: 0;">
+								<div class="copyright">
 									<ul class="menu">
 										<li>&copy; Procampo. Todos los derechos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 									</ul>
