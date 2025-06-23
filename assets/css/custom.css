@@ -22,10 +22,10 @@
 
 .carousel article {
     padding: 1.5em;
-    background: #fff;
+    background: #f9fafb;
     text-align: center;
     border-radius: 0.5em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,0,0,0.12);
     margin: 0 2em 0 0;
 }
 
