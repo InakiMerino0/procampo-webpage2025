@@ -1,27 +1,92 @@
-/* Override mobile navigation panel styles */
-#navPanel, #titleBar {
-display: none !important;
-}
-
-@media screen and (max-width: 736px) {
-#navPanel {
-display: block !important;
--moz-transform: translateY(-100vh) !important;
--webkit-transform: translateY(-100vh) !important;
--ms-transform: translateY(-100vh) !important;
-transform: translateY(-100vh) !important;
-}
-
+/* Override mobile and tablet navigation panel styles */
+#navPanel,
 #titleBar {
-display: block !important;
+  display: none !important;
 }
 
-body.navPanel-visible #navPanel {
--moz-transform: translateY(0) !important;
--webkit-transform: translateY(0) !important;
--ms-transform: translateY(0) !important;
-transform: translateY(0) !important;
-}
+@media screen and (max-width: 980px) {
+  /* hide default nav links */
+  #nav {
+    display: none;
+  }
+
+  /* hamburger button */
+  #navButton {
+    display: block !important;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    left: auto;
+    width: 40px;
+    height: 40px;
+    z-index: 10003;
+  }
+
+  #navButton .toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  #navButton .toggle:before {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    left: 0;
+    background: #aad568;
+    border-radius: 0.35em;
+    color: #fff;
+  }
+
+  /* sliding panel */
+  #navPanel {
+    display: block !important;
+    width: 60%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    -moz-transform: translateX(-100%) !important;
+    -webkit-transform: translateX(-100%) !important;
+    -ms-transform: translateX(-100%) !important;
+    transform: translateX(-100%) !important;
+    -moz-transition: transform 0.3s ease !important;
+    -webkit-transition: transform 0.3s ease !important;
+    -ms-transition: transform 0.3s ease !important;
+    transition: transform 0.3s ease !important;
+    background: #aad568;
+  }
+
+  #titleBar {
+    display: block !important;
+  }
+
+  body.navPanel-visible #navPanel {
+    -moz-transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -ms-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+  }
+
+  body.navPanel-visible #page-wrapper,
+  body.navPanel-visible #navButton {
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+
+  body.navPanel-visible::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 10000;
+  }
 }
 
 /* Header video adjustments */
