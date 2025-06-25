@@ -12,31 +12,48 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="stylesheet" href="assets/css/auto-logo-slider.css" />
-                <link rel="stylesheet" href="assets/css/index.css" />
+        <link rel="stylesheet" href="assets/css/index.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dS6Y1cxrFA8bUkO+ogzAm8h1Hn0pV3Y8YT2v1sr1MSQe6hw2yYB9H9n1tFoZT3zh0+BTtPlqvGjNFH6GQI3KBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="homepage is-preload">
-                <div id="page-wrapper">
+		<div id="page-wrapper">
 
-								                        <div id="mobile-bar">
-									                            <img src="images/logoProcampo.png" alt="Procampo Logo" class="mobile-logo" />
-</div>
+			<div id="mobile-bar" style="display: flex; align-items: center; justify-content: space-between;">
+				<a href="index.html" class="logo-link">
+					<img src="images/logoProcampo.png" alt="Procampo Logo" class="mobile-logo" />
+				</a>
+				<button id="hamburger" aria-label="Abrir menú" class="hamburger">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
 
 			<!-- Header -->
 				<div id="header">
 					<video id="header-video" autoplay muted loop playsinline>
 						<source src="videos/header_video.mp4" type="video/mp4">
 					</video>
-
+					<!-- Mobile nav overlay -->
+					<nav id="mobile-nav" class="mobile-nav">
+						<ul>
+							<li><a href="index.html">Sobre Nosotros</a></li>
+							<li><a href="ganaderia.html">Ganaderia</a></li>
+							<li><a href="agricultura.html">Agricultura</a></li>
+							<li><a href="maquinaria.html">Maquinaria</a></li>
+							<li><a href="novedades.html">Novedades</a></li>
+						</ul>
+					</nav>
 					<!-- Inner -->
-						<div class="inner">
-														<footer class="cover-footer">
+					<div class="inner">
+						<div class="header-row"></div>
+						<hr />
+						<footer class="cover-footer">
 								<a href="#banner" class="button circled scrolly conoce-mas">Conocé más</a>
-							</footer>
-						</div>
+						</footer>
+					</div>
 
 					<!-- Nav -->
 					<nav id="nav">

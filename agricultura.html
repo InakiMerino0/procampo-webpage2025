@@ -15,8 +15,13 @@
     </head>
     <body class="updates is-preload">
         <div id="page-wrapper">
-            <div id="mobile-bar">
-                <img src="images/logoProcampo.png" alt="Procampo Logo" class="mobile-logo" />
+            <div id="mobile-bar" style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logoProcampo.png" alt="Procampo Logo" class="mobile-logo" />
+                </a>
+                <button id="hamburger" aria-label="Abrir menú" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
 
             <!-- Header -->
@@ -26,6 +31,15 @@
                     <a href="#contenido" class="button circled scrolly">Ver Actualización</a>
                 </div>
                 <!-- Nav -->
+                <nav id="mobile-nav" class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html">Sobre Nosotros</a></li>
+                        <li><a href="ganaderia.html">Ganaderia</a></li>
+                        <li><a href="agricultura.html">Agricultura</a></li>
+                        <li><a href="maquinaria.html">Maquinaria</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                    </ul>
+                </nav>
                 <nav id="nav">
                     <ul>
                         <li><a href="index.html">Sobre Nosotros</a></li>

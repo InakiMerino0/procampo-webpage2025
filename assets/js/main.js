@@ -215,3 +215,28 @@
 		});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+	var hamburger = document.querySelector('#mobile-bar .hamburger');
+	var mobileNav = document.getElementById('mobile-nav');
+	console.log('Hamburger:', hamburger);
+	if (hamburger && mobileNav) {
+		hamburger.addEventListener('click', function(e) {
+			console.log('Hamburger clicked');
+			e.stopPropagation();
+			mobileNav.classList.toggle('open');
+		});
+		// Close menu when clicking a link
+		mobileNav.querySelectorAll('a').forEach(function(link) {
+			link.addEventListener('click', function() {
+				mobileNav.classList.remove('open');
+			});
+		});
+		// Close menu when clicking outside
+		document.addEventListener('click', function(e) {
+			if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== hamburger) {
+				mobileNav.classList.remove('open');
+			}
+		});
+	}
+});
