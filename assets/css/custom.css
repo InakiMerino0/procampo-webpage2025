@@ -54,4 +54,8 @@
 /* Override the main carousel padding */
 .carousel {
     padding: 4em 0 !important;
+}
+
+#contenido {
+  scroll-margin-top: 80px;
 } 
