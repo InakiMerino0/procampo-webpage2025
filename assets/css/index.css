@@ -4,6 +4,19 @@
   display: none !important;
 }
 
+/* Disable original template's mobile navigation completely */
+#navButton {
+  display: none !important;
+}
+
+#navPanel {
+  display: none !important;
+}
+
+body.navPanel-visible #navPanel {
+  display: none !important;
+}
+
 /* mobile top bar hidden by default */
 #mobile-bar {
   display: none;
@@ -435,13 +448,30 @@ margin-right: 2em;  /* Add margin to the button */
     
     /* Mobile-specific banner adjustments */
     #banner {
-        padding: 2em 0.5em 2em 0.5em;  /* Reduced horizontal padding for mobile */
+        padding: 4em 0em 0em 0em;  /* Reduced horizontal padding for mobile */
     }
     
     #banner header > p {
-        padding: 1em 0.5em 1em 0.5em;  /* Reduced horizontal padding for text */
+        padding: 0.5em 0.5em 0em 0.5em;  /* Reduced horizontal padding for text */
         font-size: 1.1em;  /* Slightly smaller font for better mobile fit */
         line-height: 1.4em;  /* Adjusted line height for mobile */
+    }
+    
+    /* Mobile-specific main article adjustments */
+    #main {
+        padding: 0 1em;  /* Add horizontal padding for better mobile spacing */
+    }
+    
+    #main h2 {
+        font-size: 1.8em;  /* Smaller font size for mobile */
+        margin-bottom: 1em;  /* Add some bottom margin */
+        line-height: 1.3;  /* Tighter line height for mobile */
+    }
+    
+    #main p {
+        font-size: 0.95em;  /* Smaller font size for mobile */
+        line-height: 1.5;  /* Adjusted line height for better readability */
+        margin-bottom: 1.5em;  /* Add bottom margin for spacing */
     }
 }
 
@@ -730,7 +760,7 @@ body.updates #header {
   }
   
   .wrapper.style1.features-wrapper .major h2 {
-    font-size: 2.4em;
+    font-size: 2.2em;
   }
   
   /* Mobile adjustments for cards container */

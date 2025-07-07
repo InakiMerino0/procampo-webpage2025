@@ -49,6 +49,8 @@
 	// Nav.
 
 		// Button.
+			// Disabled original mobile navigation to use custom mobile nav
+			/*
 			$(
 				'<div id="navButton">' +
 					'<a href="#navPanel" class="toggle"></a>' +
@@ -74,6 +76,7 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+			*/
 
 	// Carousels.
 		$('.carousel').each(function() {
