@@ -401,7 +401,7 @@ display: block;
 }
 
 #banner {
-padding: 1em 0 2em 0;
+padding: 1em 0 1em 0;
 position: relative;
 }
 
@@ -432,11 +432,22 @@ margin-right: 2em;  /* Add margin to the button */
     #banner .button {
         margin-right: 1em;  /* Smaller margin on mobile */
     }
+    
+    /* Mobile-specific banner adjustments */
+    #banner {
+        padding: 2em 0.5em 2em 0.5em;  /* Reduced horizontal padding for mobile */
+    }
+    
+    #banner header > p {
+        padding: 1em 0.5em 1em 0.5em;  /* Reduced horizontal padding for text */
+        font-size: 1.1em;  /* Slightly smaller font for better mobile fit */
+        line-height: 1.4em;  /* Adjusted line height for mobile */
+    }
 }
 
 .institution-subtitle {
 text-align: center;
-margin: 2em 0 0.5em;
+margin: 1em 0 0.5em;
 font-size: 1em;
 color: #3e6a09;
 }
@@ -706,9 +717,39 @@ body.updates #header {
   .features-grid.new-features-grid {
     grid-template-columns: 1fr;
     gap: 1.5em;
+    padding: 0 1.5em;
+    max-width: 100%;
   }
   .feature-card {
     padding: 1.5em 1.2em 1.2em 1.2em;
+  }
+  
+  /* Mobile adjustments for features wrapper title */
+  .wrapper.style1.features-wrapper .major {
+    padding: 0 1.5em;
+  }
+  
+  .wrapper.style1.features-wrapper .major h2 {
+    font-size: 2.4em;
+  }
+  
+  /* Mobile adjustments for cards container */
+  .cards-container {
+    padding: 0 1.5em;
+    margin-top: 3em;
+  }
+  
+  .cards-container .row {
+    gap: 1.5em;
+  }
+  
+  .cards-container .col-6 {
+    margin-bottom: 1.5em;
+  }
+  
+  .card-3d {
+    padding: 1.5em;
+    margin: 0;
   }
 }
 

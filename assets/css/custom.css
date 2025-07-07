@@ -181,6 +181,48 @@
   #header {
     z-index: 1;
   }
+  
+  /* Mobile styles for updates header */
+  .updates-header {
+    justify-content: center !important;
+    text-align: center;
+  }
+  
+  .updates-header .hero-inner {
+    text-align: center !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+    padding-right: 0;
+  }
+  
+  .updates-header h1 {
+    font-size: 3em !important;
+    margin-bottom: 0.2em !important;
+    text-align: center;
+  }
+  
+  .updates-header .button {
+    margin: 0 auto;
+  }
+  
+  /* Mobile spacing for content section */
+  #contenido .container {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+  }
+  
+  #contenido .major h2 {
+    margin-bottom: 1.5em;
+  }
+  
+  #contenido .container > p {
+    margin-bottom: 2em;
+  }
+  
+  #contenido .video-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
 }
 
 @media (min-width: 901px) {
