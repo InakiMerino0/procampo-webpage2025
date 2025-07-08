@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("fontawesome-all.min.css");
 
-/*
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -22987,67 +22982,7 @@ input, select, textarea {
 			padding: 2em 3em; /* Increased horizontal padding */
 		}
 
-		.carousel article {
-			display: inline-block;
-			width: 22em; /* Increased width */
-			background: #fff;
-			text-align: center;
-			padding: 2em 2em 4em 2em; /* Increased padding */
-			margin: 0 3em 0 0; /* Increased margin */
-			white-space: normal;
-			opacity: 1.0;
-			-moz-transition: opacity 0.75s ease-in-out;
-			-webkit-transition: opacity 0.75s ease-in-out;
-			-ms-transition: opacity 0.75s ease-in-out;
-			transition: opacity 0.75s ease-in-out;
-			vertical-align: top;
-		}
 
-			.carousel article.loading {
-				opacity: 0;
-			}
-
-			.carousel article .image {
-				position: relative;
-				left: -2em;
-				top: 0;
-				width: calc(100% + 4em);
-				margin-right: -2em;
-				margin-bottom: 2em;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.carousel article p {
-				text-align: center;
-			}
-
-			.carousel article .image.featured {
-				position: relative;
-				left: -2em;
-				top: 0;
-				width: calc(100% + 4em);
-				margin: -2em -2em 2em -2em;
-				height: 18em;
-				overflow: hidden;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background: #fff;
-			}
-
-			.carousel article .image.featured img {
-				width: auto;
-				height: auto;
-				max-width: 90%;
-				max-height: 90%;
-				object-fit: contain;
-				padding: 1em;
-				background: #fff;
-				display: block;
-				margin: auto;
-			}
 
 /* Wide */
 
