@@ -124,6 +124,11 @@
   #nav {
     display: none !important;
   }
+  #header .header-logo {
+    display: inline-block !important;
+    height: 40px;
+    width: auto;
+  }
   .header-row {
     width: 100%;
     display: flex;
@@ -178,7 +183,7 @@
     width: auto;
     display: block;
   }
-  .header-row {
+  .header-logo, .header-row {
     display: none !important;
   }
   #header {
