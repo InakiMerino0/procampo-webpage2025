@@ -4284,23 +4284,6 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
-					justify-content: flex-start;
-				}
-
-					justify-content: center;
-				}
-
-					justify-content: flex-end;
-				}
-
-					align-items: flex-start;
-				}
-
-					align-items: center;
-				}
-
-					align-items: flex-end;
-				}
 
 				.row > .imp-normal {
 					order: -1;
@@ -4504,7 +4487,7 @@ input, select, textarea {
 							padding-top: 72px;
 						}
 
-		}
+		
 
 		@media screen and (max-width: 960px) {
 
@@ -4743,7 +4726,6 @@ input, select, textarea {
 							padding-top: 64px;
 						}
 
-		}
 
 		@media screen and (max-width: 840px) {
 
@@ -4760,24 +4742,6 @@ input, select, textarea {
 
 				.row.gtr-uniform > * > :last-child {
 					margin-bottom: 0;
-				}
-
-					justify-content: flex-start;
-				}
-
-					justify-content: center;
-				}
-
-					justify-content: flex-end;
-				}
-
-					align-items: flex-start;
-				}
-
-					align-items: center;
-				}
-
-					align-items: flex-end;
 				}
 
 				.row > .imp-narrower {
@@ -4999,24 +4963,6 @@ input, select, textarea {
 
 				.row.gtr-uniform > * > :last-child {
 					margin-bottom: 0;
-				}
-
-					justify-content: flex-start;
-				}
-
-					justify-content: center;
-				}
-
-					justify-content: flex-end;
-				}
-
-					align-items: flex-start;
-				}
-
-					align-items: center;
-				}
-
-					align-items: flex-end;
 				}
 
 				.row > .imp-mobile {
