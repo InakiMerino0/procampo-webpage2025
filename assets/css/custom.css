@@ -231,6 +231,12 @@
     margin-top: 2em;
     margin-bottom: 2em;
   }
+  .cover-footer .conoce-mas {
+    font-size: 1.1em !important;
+    padding: 0.8em 1.5em !important;
+    min-width: 5em !important;
+    white-space: normal !important;
+  }
 }
 
 @media (min-width: 901px) {
@@ -282,4 +288,36 @@ body {
 }
 #footer {
   margin-top: auto;
+} 
+
+.cover-button, .conoce-mas {
+    border-radius: 8px !important;
+} 
+
+.button {
+    background: #fff !important;
+    color: #000 !important;
+}
+.button:hover, .button:focus {
+    background: #28a745 !important; /* Bootstrap green, adjust if needed */
+    color: #fff !important;
+} 
+
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  #header-video {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: #000;
+  }
+  /* Remove overflow hidden from #header for mobile */
+  #header {
+    overflow: visible;
+  }
 } 
