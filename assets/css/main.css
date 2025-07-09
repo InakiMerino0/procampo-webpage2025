@@ -8065,6 +8065,7 @@ input, select, textarea {
 				margin: -2em -2em 2em -2em;
 				height: 15em;
 				overflow: hidden;
+			}
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("fontawesome-all.min.css");
 
@@ -12571,6 +12572,7 @@ input, select, textarea {
 				left: -2em;
 				top: 0;
 				width: calc(100% + 4em);
+			}
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("fontawesome-all.min.css");
 
@@ -20581,6 +20583,7 @@ input, select, textarea {
 
 			.carousel article .image.featured {
 				position: relative;
+			}
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("fontawesome-all.min.css");
 
