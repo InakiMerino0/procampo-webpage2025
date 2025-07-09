@@ -856,3 +856,41 @@ body.updates #header {
   margin: 16px auto 0 auto; /* Top margin for spacing, centered horizontally */
   border-radius: 10px;  /* Optional: rounded corners */
 }
+
+/* Sponsors Section */
+#sponsors {
+  padding: 40px 0;
+  background: #fafafa;
+}
+
+.sponsors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Even space between frames */
+  flex-wrap: wrap;
+}
+
+.sponsor-frame {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 120px;
+  transition: box-shadow 0.2s;
+}
+
+.sponsor-frame:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.sponsor-img {
+  max-width: 140px;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+}
