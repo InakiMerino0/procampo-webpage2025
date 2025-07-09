@@ -846,3 +846,13 @@ body.updates #header {
   text-align: center;
   align-items: center;
 }
+
+/* --- Carousel Card Image Sizing --- */
+.carousel .reel article img {
+  width: 220px;         /* Set your desired width */
+  height: 160px;        /* Set your desired height */
+  object-fit: cover;    /* Ensures image covers area without stretching */
+  display: block;
+  margin: 16px auto 0 auto; /* Top margin for spacing, centered horizontally */
+  border-radius: 10px;  /* Optional: rounded corners */
+}
